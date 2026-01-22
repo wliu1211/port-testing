@@ -1,0 +1,6 @@
+.primary-container{
+    max-width: var(--maxWidth);
+    width: 100%;
+    color: white;
+    position: relative;
+}

@@ -1,0 +1,161 @@
+*,
+*::after,
+*::before{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+:root{
+  /* Size variables */
+  --maxWidth: 85rem;
+  --size-5: 0.313rem;
+  --size-10: 0.625rem;
+  --size-12: 0.75rem;
+  --size-14: 0.875rem;
+  --size-16: 1rem;
+  --size-18: 1.125rem;
+  --size-20: 1.25rem;
+  --size-30: 1.875rem;
+  --size-40: 2.5rem;
+  --size-50: 3.125rem;
+  --size-75: 4.688rem;
+  --size-100: 6.25rem;
+  --size-140: 8.75rem;
+  --size-150: 9.375rem;
+  --size-200: 12.5rem;
+  --size-225: 14.063rem;
+  --size-250: 15.625rem;
+  --size-270: 16.875rem;
+  --size-300: 18.75rem;
+  --size-350: 21.875rem;
+  --size-400: 25rem;
+  --size-450: 28.125rem;
+  
+  /* Color palette */
+  --primary-bg: rgb(37, 52, 80);
+  --secondary-bg: rgb(30, 42, 70);
+  --accent-light: rgb(102, 199, 255);
+  --accent-medium: rgb(104, 151, 204);
+  --text-light: #ffffff;
+  --text-muted: rgba(255, 255, 255, 0.8);
+  --border-color: rgba(255, 255, 255, 0.2);
+  --shadow-color: rgba(0, 0, 0, 0.3);
+  
+  /* Typography */
+  --font-heading: 'Work Sans', sans-serif;
+  --font-body: 'Work Sans', sans-serif;
+  --font-signature: 'Cedarville Cursive', cursive;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-body);
+  color: var(--text-light);
+  line-height: 1.6;
+  background-color: var(--primary-bg);
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading);
+  line-height: 1.2;
+  margin-bottom: var(--size-16);
+}
+
+a {
+  text-decoration: none;
+  color: var(--text-light);
+  transition: all 0.3s ease;
+}
+
+.App {
+  text-align: center;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  background-color: var(--primary-bg);
+}
+
+/* Section styling */
+section {
+  padding: var(--size-75) 0;
+  max-width: var(--maxWidth);
+  width: 100%;
+  margin: 0 auto;
+}
+
+.header-border {
+  max-width: 100%;
+  height: 4px;
+  border-radius: 20px;
+  background: linear-gradient(90deg, var(--accent-light), var(--accent-medium));
+  margin-bottom: var(--size-30);
+}
+
+/* Common button styles */
+.btn {
+  padding: 10px 25px;
+  border-radius: 5px;
+  border: none;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  background-color: var(--secondary-bg);
+  color: var(--text-light);
+}
+
+.btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px var(--shadow-color);
+}
+
+/* Responsive media queries */
+@media all and (max-width: 895px){
+  #intro .intro-container{
+    justify-content: center;
+  flex-direction: column;
+  }
+  
+  #about{
+    justify-content: center;
+    flex-direction: column;
+  }
+  
+  #about .about-header {
+    margin: 40px auto !important;
+  }
+
+  #skills .skills-header-container{
+    margin: 40px auto !important;
+  }
+
+  #skills .skills-container{
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  #projects .project-header-container{
+    margin: 40px auto !important;
+}
+}
+
+@media all and (max-width: 875px){
+  #projects .cards-container{
+    flex-direction: column;
+    align-items: center;
+}
+}
+
+@media all and (max-width: 480px) {
+  h1 {
+    font-size: 2.2rem;
+  }
+  
+  h2 {
+    font-size: 1.8rem;
+  }
+}

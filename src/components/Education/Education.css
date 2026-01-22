@@ -1,0 +1,187 @@
+#education {
+  padding: 50px 0;
+  width: 100%;
+  max-width: 85rem;
+}
+
+#education .education-header-container {
+  margin: 40px 20px;
+  font-size: 2rem;
+  width: fit-content;
+  margin-bottom: 70px;
+}
+
+.education-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 40px;
+  padding: 20px;
+  margin: 0 auto;
+  max-width: 1200px;
+}
+
+.education-card {
+  background-color: var(--secondary-bg);
+  border-radius: 15px;
+  padding: 25px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+  border: 1px solid var(--border-color);
+  width: 260px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.education-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+  border-color: var(--accent-light);
+}
+
+.education-card::before {
+  content: '';
+  position: absolute;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  opacity: 0.05;
+  z-index: 0;
+}
+
+.education-card.current::before {
+  background: rgb(87, 6, 140); /* NYU purple */
+  top: -50px;
+  right: -50px;
+}
+
+.education-card.past::before {
+  background: rgb(255, 130, 0); /* RCC orange */
+  top: -50px;
+  left: -50px;
+}
+
+.education-card.future.upenn::before {
+  background: rgb(1, 31, 91); /* UPenn blue */
+  bottom: -50px;
+  left: -50px;
+}
+
+.education-card.future.ucsb::before {
+  background: rgb(0, 54, 96); /* UCSB blue */
+  top: -50px;
+  right: -50px;
+}
+
+.school-logo {
+  width: 120px;
+  height: 120px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto 20px;
+  padding: 10px;
+  background-color: rgba(255, 255, 255, 0.05);
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.school-logo img {
+  max-width: 100%;
+  max-height: 100px;
+  object-fit: contain;
+  transition: transform 0.3s ease;
+}
+
+.school-logo.nyu img {
+  background-color: white;
+  padding: 5px;
+  border-radius: 5px;
+}
+
+.school-logo.upenn img {
+  background-color: white;
+  padding: 5px;
+  border-radius: 5px;
+}
+
+.school-logo.ucsb img {
+  background-color: white;
+  padding: 5px;
+  border-radius: 5px;
+}
+
+.school-logo.rcc img {
+  background-color: white;
+  padding: 5px;
+  border-radius: 5px;
+}
+
+.education-card:hover .school-logo img {
+  transform: scale(1.05);
+}
+
+.school-info {
+  width: 100%;
+  text-align: center;
+}
+
+.school-info h3 {
+  font-size: 1.3rem;
+  margin-bottom: 5px;
+  color: var(--text-light);
+}
+
+.school-info h4 {
+  font-size: 1rem;
+  margin-bottom: 10px;
+  color: var(--accent-light);
+  font-weight: 500;
+}
+
+.school-info .degree {
+  font-size: 1.1rem;
+  margin-bottom: 5px;
+  color: var(--text-light);
+}
+
+.school-info .year {
+  font-size: 0.9rem;
+  color: var(--text-muted);
+  margin-bottom: 0;
+}
+
+/* Responsive styles */
+@media (max-width: 1200px) {
+  .education-container {
+    justify-content: center;
+  }
+  
+  .education-card {
+    width: 260px;
+  }
+}
+
+@media (max-width: 768px) {
+  .education-container {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .education-card {
+    width: 90%;
+    max-width: 320px;
+  }
+}
+
+@media (max-width: 480px) {
+  .education-card {
+    padding: 20px;
+    width: 90%;
+  }
+}

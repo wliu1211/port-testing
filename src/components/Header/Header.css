@@ -1,0 +1,129 @@
+.header{
+    width: 100%;
+    max-width: 1360px;
+    position: fixed;
+    background-color: var(--secondary-bg);
+    backdrop-filter: blur(10px);
+    border-radius: 0 0 20px 20px;
+    height: 70px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: var(--text-light);
+    z-index: 800;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+    font-size: 1.35rem;
+    transition: all 0.3s ease;
+    padding: 0 20px;
+}
+.header .name-init-container{
+    margin: 0 10px;
+    font-size: 1.75rem;
+}
+.header .name-init-container h4{
+    font-family: var(--font-signature);
+    background: linear-gradient(90deg, var(--accent-light), var(--text-light));
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+.header .header-item-container{
+    display: flex;
+    width: 100%;
+    max-width: 40.5rem;
+    justify-content: space-between;
+    margin-right: 10px;
+    font-family: var(--font-heading);
+}
+.header .header-item-container > a{
+    padding: 0 15px;
+    height: 44px;
+    display: flex;
+    align-items: center;
+    border-radius: 10px;
+    text-decoration: none;
+    color: var(--text-light);
+    position: relative;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+    transition: all 0.3s ease;
+}
+.header .header-item-container > a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 3px;
+    background: var(--accent-light);
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    transition: width 0.3s ease;
+    border-radius: 3px;
+}
+.header .header-item-container > a:hover{
+    color: var(--accent-light);
+}
+.header .header-item-container > a:hover::after {
+    width: 70%;
+}
+/* Mobile menu button only appears on small screens */
+.mobile-menu-btn {
+    display: none;
+    font-size: 1.75rem;
+    cursor: pointer;
+    background: none;
+    border: none;
+    color: var(--text-light);
+}
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .header {
+        padding: 0 10px;
+    }
+    
+    .header .header-item-container {
+        max-width: 100%;
+        justify-content: flex-end;
+    }
+    
+    .header .header-item-container > a {
+        padding: 0 10px;
+        font-size: 1.1rem;
+    }
+}
+@media (max-width: 600px) {
+    .mobile-menu-btn {
+        display: block;
+    }
+    
+    .header .header-item-container {
+        position: absolute;
+        top: 70px;
+        left: 0;
+        width: 100%;
+        background-color: var(--secondary-bg);
+        flex-direction: column;
+        align-items: center;
+        padding: 20px 0;
+        border-radius: 0 0 20px 20px;
+        box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+        transform: translateY(-150%);
+        opacity: 0;
+        pointer-events: none;
+        transition: all 0.3s ease;
+    }
+    
+    .header .header-item-container.active {
+        transform: translateY(0);
+        opacity: 1;
+        pointer-events: all;
+    }
+    
+    .header .header-item-container > a {
+        height: 50px;
+        width: 100%;
+        justify-content: center;
+    }
+}
