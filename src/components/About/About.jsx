@@ -11,7 +11,7 @@ function About() {
           <div className="header-border"></div>
         </div>
         <div className="about-container">
-          <p>I started making websites out of curiosity and eventually wanted to explore more of the computer science field at a university. I completed my undergraduate degree at NYU Tandon studying computer science in 2025.  I am currently pursuing my master's degree in Artificial Intelligence at University of Pennsylvania.</p>
+          <p>I started making websites out of curiosity and eventually wanted to explore more of the computer science field at a university. I completed my undergraduate degree at NYU Tandon studying computer science in 2025. I am currently pursuing my master's degree in Artificial Intelligence at University of Pennsylvania.</p>
         </div>
       </div>
       <div className="img-wrapper"></div>
