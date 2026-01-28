@@ -25,6 +25,8 @@
   "workspace": {
     "packageJson": {
       "dependencies": [
+        "npm:@babel/plugin-proposal-private-property-in-object@^7.21.11",
+        "npm:@supabase/supabase-js@^2.93.2",
         "npm:@testing-library/jest-dom@^5.16.5",
         "npm:@testing-library/react@^13.4.0",
         "npm:@testing-library/user-event@^13.5.0",
